@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div data-role="header">
+            <h1>UITM Cafe</h1>
+        </div>
+         <form >
+            <div style="padding:10px 20px;">
+                <h3>Order Form</h3>
+
+                <label for="un" class="ui-hidden-accessible">
+                      Name:
+                </label>
+                
+                <input type="text" name="user" id="un" value=""
+                    placeholder=" Full Name" data-theme="a">
+
+                <label for="un" class="ui-hidden-accessible">
+                    Matric number :
+                </label>
+                
+                <input type="password" name="pass" id="pw"
+                    value="" placeholder="Matric Number"
+                    data-theme="a">
+
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="look for lunch baverages" data-inset="true">
+                            <li><a href="#">Hotdog with Wraped Bacon Sausages</a></li>
+                            <li><a href="#">Double CheeseBurger</a></li>
+                            <li><a href="#">Fanta Grape (Cold)</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Hot Cappucinno</a></li>
+                            <li><a href="#">Kitkat Snack Bar</a></li>
+                        </ul>
+
+                        <input type="text" data-role="date" data-inline="true" placeholder="Day/Month/Year">
+
+                        <script>
+                            let day;
+                            switch (new Date().getDay()) {
+                              case 0:
+                                day = "Ахад";
+                                break;
+                              case 1:
+                                day = "월요일";
+                                break;
+                              case 2:
+                                day = "วันอังคาร";
+                                break;
+                              case 3:
+                                day = "Rabu";
+                                break;
+                              case 4:
+                                day = "Donnerstag";
+                                break;
+                              case 5:
+                                day = "金曜日";
+                                break;
+                              case  6:
+                                day = "Saturday";
+                            }
+                            document.getElementById("demo").innerHTML = "Today is " + day;
+                            </script>
+
+                <input type = "submit" value = "Submit Button" data-inline = "true" 
+                data-corner = "true" style="background-color: cyan;">
+                <input type = "reset" value = "Reset Button" data-inline = "true" 
+                data-corner = "true" style="background-color: cyan;">
+            </div>
+        </form> 
+        
+    
+    </center>
+
+</body>
+</html>
